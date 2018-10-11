@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GuestListContainer from '../containers/GuestListContainer';
 
-class Stuff extends Component {
+export default class Guests extends Component {
   render() {
     return (
       <div>
@@ -12,5 +12,3 @@ class Stuff extends Component {
     );
   }
 }
-
-export default Stuff;
