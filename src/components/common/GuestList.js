@@ -21,14 +21,17 @@ export default class GuestList extends React.Component {
       .then(res => {
         console.log(res);
         console.log(res.data);
-        //window.location.reload();
-      })
+        this.setState({});
+        this.setState({ fName: '',  lName: ''});
+        document.getElementById("GuestInputForm").reset();
+        //window.location.reload(true);
+      });
   }
 
   render() {
     return (
 
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} id="GuestInputForm">
         <FormItem>
           <label>First Name:  <input type="text" name="this.state.fName" onChange={this.handlefNameChange} /></label>
         </FormItem>
