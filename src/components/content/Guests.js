@@ -6,7 +6,6 @@ export default class Guests extends Component {
     return (
       <div>
         <h2>Guests</h2>
-        <p>Here is the Guest List</p>
         <GuestListContainer />
       </div>
     );

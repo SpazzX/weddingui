@@ -1,10 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Form } from 'antd';
+import { Button, Form, FormGroup, Label, Input  } from 'reactstrap';
 
-const FormItem = Form.Item;
-
-export default class GuestList extends React.Component {
+export default class AddGuest extends React.Component {
   state = {
     fName: '',
     lName: ''
@@ -31,14 +29,16 @@ export default class GuestList extends React.Component {
   render() {
     return (
 
-      <Form onSubmit={this.handleSubmit} id="GuestInputForm">
-        <FormItem>
-          <label>First Name:  <input type="text" name="this.state.fName" onChange={this.handlefNameChange} /></label>
-        </FormItem>
-        <FormItem>
-          <label>Last Name:  <input type="text" name="this.state.lName" onChange={this.handlelNameChange} /></label><br />
-        </FormItem>
-        <button type="submit">Add</button>
+      <Form className="form" id="GuestInputForm" onSubmit={ (e) => this.handleSubmit(e) }>
+        <FormGroup>
+          <Label>First Name</Label>
+          <Input type="text" name="this.state.fName" value={ this.state.fName } onChange={ (e) => { this.handlefNameChange(e) } }/>
+        </FormGroup>
+        <FormGroup>
+          <Label>Last Name</Label>
+          <Input type="text" name="this.state.lName" value={ this.state.lName } onChange={ (e) => { this.handlelNameChange(e) } }/>
+        </FormGroup>
+        <Button color="success">Submit</Button>
       </Form>
     )
   }
