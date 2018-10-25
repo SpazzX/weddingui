@@ -1,35 +1,20 @@
-body {
-  background-color: #9E0BF3;
-  padding: 20px;
-  margin: 0;
+.guestListContainer{
+  align-items: center;
+  width: 50%;
 }
-h1, h2, p, ul, li {
-  font-family: sans-serif;
+
+.guestInputFormAdd{
+  width: 25%;
 }
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(120, 0, 247, 0.96);
 }
-ul.header {
-  background-color: #444;
-  padding: 0;
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(29, 114, 3);
 }
-ul.header li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-}
-.content {
-  background-color: #FFF;
-  padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 10px;
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: rgb(6, 200, 41);
 }

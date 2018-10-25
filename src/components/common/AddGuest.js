@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Button, Form, FormGroup, Label, Input  } from 'reactstrap';
+import './Common.css';
 
 export default class AddGuest extends React.Component {
   state = {
@@ -21,25 +22,26 @@ export default class AddGuest extends React.Component {
         console.log(res.data);
         this.setState({});
         this.setState({ fName: '',  lName: ''});
-        document.getElementById("GuestInputForm").reset();
-        //window.location.reload(true);
+        document.getElementById("guestInputForm").reset();
       });
   }
 
   render() {
     return (
-
-      <Form className="form" id="GuestInputForm" onSubmit={ (e) => this.handleSubmit(e) }>
-        <FormGroup>
-          <Label>First Name</Label>
-          <Input type="text" name="this.state.fName" value={ this.state.fName } onChange={ (e) => { this.handlefNameChange(e) } }/>
-        </FormGroup>
-        <FormGroup>
-          <Label>Last Name</Label>
-          <Input type="text" name="this.state.lName" value={ this.state.lName } onChange={ (e) => { this.handlelNameChange(e) } }/>
-        </FormGroup>
-        <Button color="success">Submit</Button>
-      </Form>
+      <div className="guestInputFormAdd">
+        <h2>Add Guests</h2>
+        <Form id="guestInputForm" onSubmit={ (e) => this.handleSubmit(e) }>
+          <FormGroup>
+            <Label>First Name</Label>
+            <Input type="text" name="this.state.fName" value={ this.state.fName } onChange={ (e) => { this.handlefNameChange(e) } }/>
+          </FormGroup>
+          <FormGroup>
+            <Label>Last Name</Label>
+            <Input type="text" name="this.state.lName" value={ this.state.lName } onChange={ (e) => { this.handlelNameChange(e) } }/>
+          </FormGroup>
+          <Button color="success">Submit</Button>
+        </Form>
+      </div>
     )
   }
 }
