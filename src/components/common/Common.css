@@ -1,12 +1,3 @@
-.guestListContainer{
-  align-items: center;
-  width: 50%;
-}
-
-.guestInputFormAdd{
-  width: 25%;
-}
-
 .navbar-light .navbar-nav .nav-link {
   color: rgba(120, 0, 247, 0.96);
 }

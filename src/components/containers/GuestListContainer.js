@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AddGuest from '../common/AddGuest';
-import { Table } from 'reactstrap';
+import { Table, Container } from 'reactstrap';
 import axios from 'axios';
 import './../common/Common.css';
 
@@ -31,19 +31,23 @@ class GuestListContainer extends Component {
   render() {
     return (
       <div>
-        <div className="guestListContainer">
-        <Table>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>UUID</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.state.names.map(person => <tr key={person.domainUUID}><td>{person.firstName}</td><td>{person.lastName}</td><td>{person.domainUUID}</td></tr>)}
-          </tbody>
-        </Table>
+        <Container>
+          <h2>Guests</h2>
+          <Table hover>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>UUID</th>
+              </tr>
+            </thead>
+            <tbody>
+              { this.state.names.map(person => <tr key={person.domainUUID}><td>{person.firstName}</td><td>{person.lastName}</td><td>{person.domainUUID}</td></tr>)}
+            </tbody>
+          </Table>
+        </Container>
+        <div>
+          &nbsp;
         </div>
         <AddGuest view={this.render.bind(this)}/>
       </div>
